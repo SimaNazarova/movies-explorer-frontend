@@ -1,0 +1,31 @@
+.logged-menu__account {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 0.92;
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+}
+
+.logged-menu__active-navlink {
+  font-weight: 500;
+}
+
+.logged-menu__saved-movies {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.3;
+  text-decoration: none;
+  color: black;
+  margin-left: 16px;
+}
+
+.logged-menu__movies {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.3;
+  text-decoration: none;
+  color: black;
+}
