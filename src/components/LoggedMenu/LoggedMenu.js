@@ -14,7 +14,7 @@ function LoggedMenu() {
 
       <NavLink
         to="/saved-movies"
-        className=" logged-menu__saved-movies"
+        className="logged-menu__saved-movies"
         activeClassName="logged-menu__active-navlink"
       >
         Сохраненные фильмы

@@ -30,6 +30,7 @@
   width: 100%;
 }
 
+
 .search-form__input {
   border: 0;
   height: 40px;
@@ -53,6 +54,7 @@
   height: 34px;
   align-self: center;
 }
+
 
 .search-form__find-icon {
   background-color: transparent;
