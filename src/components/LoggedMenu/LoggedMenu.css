@@ -7,10 +7,6 @@
   margin-left: auto;
 }
 
-.logged-menu__active-navlink {
-  font-weight: 500;
-}
-
 .logged-menu__saved-movies {
   font-style: normal;
   font-weight: normal;
@@ -28,4 +24,8 @@
   line-height: 1.3;
   text-decoration: none;
   color: black;
+}
+
+.logged-menu__active-navlink {
+  font-weight: 500;
 }
