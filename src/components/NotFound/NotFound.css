@@ -52,6 +52,10 @@
   max-width: 42px;
   margin-bottom: 90px;
   display: block;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
 }
 
 @media all and (max-width: 450px) {

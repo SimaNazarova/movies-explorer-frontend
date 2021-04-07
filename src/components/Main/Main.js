@@ -6,10 +6,10 @@ import AboutProject from "../AboutProject/AboutProject";
 import Tech from "../Tech/Tech";
 import AboutMe from "../AboutMe/AboutMe";
 
-function Main() {
+function Main(props) {
   return (
     <>
-      <Header color="violet" navbar="violet" />
+      <Header color="violet" navbar="logged" loggedIn={props.loggedIn} />
       <Promo />
       <NavTab />
       <AboutProject />

@@ -1,13 +1,45 @@
 import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
 import Header from "../Header/Header";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import useFormWithValidation from "../../utils/validation";
 
-function Profile() {
+function Profile(props) {
+  const currentUser = useContext(CurrentUserContext);
+
+  const {
+    values,
+    errors,
+    isValid,
+    handleChange,
+    setValues,
+  } = useFormWithValidation();
+
+  const isInputValid =
+    isValid &&
+    (values.name !== currentUser.name || values.email !== currentUser.email);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.onUpdateUser({
+      name: values.name || currentUser.name,
+      email: values.email || currentUser.email,
+    });
+  }
+
+  useEffect(() => {
+    setValues(currentUser);
+  }, [currentUser, setValues]);
+
   return (
     <>
-      <Header navbar="white" />
+      <Header navbar="logged" loggedIn={props.loggedIn} />
       <div className="profile">
-        <h2 className="profile__title">Привет, Ирина!</h2>
-        <form className="profile__form">
+        <h2 className="profile__title">Привет, {currentUser.name}!</h2>
+        <form className="profile__form" onSubmit={handleSubmit} noValidate>
+          <span className="auth__error" id="name">
+            {errors.name}
+          </span>
           <div className="profile__form-name">
             <label
               className="profile__input-label profile__input-label-name"
@@ -20,7 +52,9 @@ function Profile() {
               name="name"
               id="name"
               required
-              type="email"
+              type="text"
+              value={values.name || ""}
+              onChange={handleChange}
             />
           </div>
           <div className="profile__form-email">
@@ -37,13 +71,23 @@ function Profile() {
               required
               id="email"
               type="email"
+              value={values.email || ""}
+              onChange={handleChange}
             />
           </div>
-          <button className="profile__button" type="submit">
+          <span className="auth__error" id="email">
+            {errors.email}
+          </span>
+          <button
+            className={`profile__button ${
+              !isInputValid && "profile__button_inactive"
+            }`}
+            type="submit"
+          >
             Редактировать
           </button>
 
-          <Link to="/" className="profile__exit">
+          <Link to="/" className="profile__exit" onClick={props.handleSignOut}>
             Выйти из аккаунта
           </Link>
         </form>

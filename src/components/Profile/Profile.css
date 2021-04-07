@@ -75,7 +75,7 @@
 
 .profile__input-email {
   margin-top: 0;
-  margin-top: 3px;
+  margin-top: 11px;
   padding: 0;
 }
 
@@ -94,6 +94,13 @@
   display: block;
   margin: 220px auto 0;
   cursor: pointer;
+}
+
+.profile__button_inactive {
+  outline: none;
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 @media all and (max-width: 490px) {

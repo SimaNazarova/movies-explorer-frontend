@@ -61,9 +61,10 @@
   text-align: center;
   color: #ffffff;
 }
-
-.auth__button:hover {
+.auth__button_inactive {
   opacity: 0.7;
+  cursor: default;
+  pointer-events: none;
 }
 
 @media all and (max-width: 450px) {

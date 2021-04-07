@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "makes_all_cool": "npx prettier --write ."
+    "makes_all_cool": "npx prettier --write .",
+    "deploy": "npm run build && scp -r ./build/* sima-nazarova193@130.193.59.36:/home/sima-nazarova193/movies-explorer-frontend"
   },
   "eslintConfig": {
     "extends": [

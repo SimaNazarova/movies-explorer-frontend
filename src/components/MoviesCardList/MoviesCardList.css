@@ -9,6 +9,7 @@
   padding-top: 80px;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 @media all and (max-width: 1080px) {
@@ -56,5 +57,17 @@
     width: 240px;
     font-size: 12px;
     line-height: 15px;
+  }
+}
+
+.movies-list__message {
+  font-size: 24px;
+  line-height: 15px;
+  text-align: center;
+}
+
+@media all and (max-width: 400px) {
+  .movies-list__message {
+    font-size: 20px;
   }
 }

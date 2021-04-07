@@ -1,5 +1,4 @@
 import Logo from "../Logo/Logo";
-import { Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import UnloggedMenu from "../UnloggedMenu/UnloggedMenu";
 import LoggedMenu from "../LoggedMenu/LoggedMenu";
@@ -15,15 +14,16 @@ function Header(props) {
   return (
     <header className={`movies header header-${props.color} `}>
       <Logo logo="header" />
-      <div className={`header__menu header__menu-${props.navbar}`}>
-        <Route exact path="/">
-          <UnloggedMenu />
-        </Route>
 
-        <Route path={["/movies", "/saved-movies", "/profile"]}>
+      {props.loggedIn ? (
+        <div className={`header__menu header__menu-${props.navbar}`}>
           {windowWidth > 768 ? <LoggedMenu /> : <BurgerMenu />}
-        </Route>
-      </div>
+        </div>
+      ) : (
+        <div className={`header__menu header__menu-violet`}>
+          <UnloggedMenu />
+        </div>
+      )}
     </header>
   );
 }

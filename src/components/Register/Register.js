@@ -1,7 +1,23 @@
 import React from "react";
 import AuthForm from "../AuthForm/AuthForm";
 
-const Register = () => {
+import useFormWithValidation from "../../utils/validation";
+
+const Register = (props) => {
+  const {
+    values,
+    handleChange,
+    errors,
+    isValid,
+    resetForm,
+  } = useFormWithValidation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.onRegister(values.name, values.email, values.password);
+    resetForm();
+  };
+
   return (
     <AuthForm
       title="Добро пожаловать!"
@@ -11,6 +27,8 @@ const Register = () => {
       subtitleLink="Войти"
       className="register"
       aria-label="зарегистрироваться"
+      onSubmit={handleSubmit}
+      isValid={isValid}
     >
       <label className="auth__input-label" htmlFor="name">
         Имя
@@ -20,9 +38,13 @@ const Register = () => {
         name="name"
         id="name"
         required
-        type="email"
+        type="text"
+        onChange={handleChange}
+        minLength="2"
       />
-      <span className="auth__error" id="name"></span>
+      <span className="auth__error" id="name">
+        {errors.name}
+      </span>
       <label className="auth__input-label" htmlFor="email">
         Email
       </label>
@@ -32,8 +54,12 @@ const Register = () => {
         required
         id="email"
         type="email"
+        onChange={handleChange}
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
       />
-      <span className="auth__error" id="email"></span>
+      <span className="auth__error" id="email">
+        {errors.email}
+      </span>
       <label className="auth__input-label" htmlFor="password">
         Пароль
       </label>
@@ -44,9 +70,10 @@ const Register = () => {
         minLength="6"
         required
         id="password"
+        onChange={handleChange}
       />
       <span className="auth__error" id="password">
-        Что-то пошло не так
+        {errors.password}
       </span>
     </AuthForm>
   );
