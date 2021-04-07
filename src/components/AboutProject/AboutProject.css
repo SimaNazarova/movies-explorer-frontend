@@ -1,0 +1,128 @@
+.about-project__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+}
+
+@media all and (max-width: 440px) {
+  .about-project__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+  }
+}
+
+.about-project__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 25px;
+}
+
+@media all and (max-width: 768px) {
+  .about-project__text {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 440px) {
+  .about-project__text {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 14px;
+  }
+}
+
+.about-project__text-container {
+  display: flex;
+  border-top: solid 1px black;
+}
+
+@media all and (max-width: 440px) {
+  .about-project__text-container {
+    display: block;
+  }
+}
+
+.about-project__text-subcontainer {
+  max-width: 550px;
+  margin-top: 70px;
+}
+
+.about-project__text-subcontainer:last-of-type {
+  margin-left: 40px;
+}
+
+@media all and (max-width: 440px) {
+  .about-project__text-subcontainer:last-of-type {
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 440px) {
+  .about-project__text-subcontainer {
+    margin-top: 61px;
+  }
+}
+
+.about-project__diagramma-container {
+  display: grid;
+  grid-template-columns: 228px 1fr;
+  max-width: 1140px;
+  margin-top: 95px;
+  margin-bottom: 100px;
+}
+
+@media all and (max-width: 768px) {
+  .about-project__diagramma-container {
+    margin-top: 75px;
+    margin-bottom: 80px;
+    grid-template-columns: 140px 1fr;
+  }
+}
+
+@media all and (max-width: 440px) {
+  .about-project__diagramma-container {
+    grid-template-columns: 100px 1fr;
+    margin-top: 60px;
+    margin-bottom: 58px;
+  }
+}
+
+.about-project__diagramma_green {
+  background-color: #2be080;
+}
+
+.about-project__diagramma_grey {
+  background: #f2f2f2;
+}
+
+.about-project__diagramma-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+@media all and (max-width: 440px) {
+  .about-project__diagramma-text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+
+.about-project__diagramma {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-project__diagramma-text_grey {
+  color: #a0a0a0;
+}

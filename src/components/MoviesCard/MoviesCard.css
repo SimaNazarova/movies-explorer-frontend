@@ -1,0 +1,137 @@
+.movie-card {
+  max-width: 364px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  margin-left: 0 auto;
+}
+
+@media all and (max-width: 639px) {
+  .movie-card {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.movie-card__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 17px;
+}
+
+@media all and (max-width: 639px) {
+  .movie-card__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.movie-card__duration {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 0;
+  color: #a0a0a0;
+}
+
+@media all and (max-width: 639px) {
+  .movie-card__duration {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.movie-card__like-button {
+  background-image: url(../../images/inactiveLike.svg);
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  margin-right: 2px;
+  outline: none;
+  background-position: center;
+  margin-top: 9px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.movie-card__like-button_active {
+  background-image: url(../../images/like.svg);
+}
+
+.movie-card__delete-button {
+  background-image: url(../../images/delete.svg);
+  visibility: hidden;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 8px;
+  margin-right: 2px;
+  outline: none;
+  background-position: center;
+  margin-top: 9px;
+  margin-right: 16px;
+  background-color: transparent;
+}
+
+.movie-card__content:hover .movie-card__delete-button {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.movie-card__like-button:focus {
+  outline: none;
+}
+
+.movie-card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.movie-card__image {
+  width: 364px;
+  height: 203px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+@media all and (max-width: 768px) {
+  .movie-card__image {
+    max-width: 339px;
+    max-height: 190px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .movie-card__image {
+    max-width: 300px;
+    max-height: 168px;
+  }
+}
+
+.movie-card__about {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+@media all and (max-width: 768px) {
+  .movie-card__about {
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-bottom: 14px;
+  }
+}
