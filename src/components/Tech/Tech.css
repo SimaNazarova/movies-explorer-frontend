@@ -117,7 +117,7 @@
   margin-right: 0;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 827px) {
   .tech__list-li {
     margin-bottom: 10px;
   }

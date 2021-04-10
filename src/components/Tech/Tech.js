@@ -1,4 +1,14 @@
 function Tech() {
+  const techList = [
+    "HTML",
+    "CSS",
+    " JS",
+    " React",
+    "Git",
+    "Express.js",
+    "mongoDB",
+  ];
+
   return (
     <section className="tech main" id="tech">
       <h2 className="main__title">Технологии</h2>
@@ -8,28 +18,13 @@ function Tech() {
           На курсе веб-разработки мы освоили технологии, которые применили в
           дипломном проекте.
         </p>
+
         <ul className="tech__list">
-          <li className="tech__list-li">
-            <div className="tech__list-content">HTML</div>
-          </li>
-          <li className="tech__list-li">
-            <div className="tech__list-content">CSS</div>
-          </li>
-          <li className="tech__list-li">
-            <div className="tech__list-content">JS</div>
-          </li>
-          <li className="tech__list-li">
-            <div className="tech__list-content">React</div>
-          </li>
-          <li className="tech__list-li">
-            <div className="tech__list-content">Git</div>
-          </li>
-          <li className="tech__list-li">
-            <div className="tech__list-content">Express.js</div>
-          </li>
-          <li className="tech__list-li">
-            <div className="tech__list-content">mongoDB</div>
-          </li>
+          {techList.map((item, i) => (
+            <li key={i} className="tech__list-li">
+              <div className="tech__list-content">{item}</div>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
