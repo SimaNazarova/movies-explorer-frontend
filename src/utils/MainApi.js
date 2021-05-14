@@ -20,7 +20,7 @@ class MainApi {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ name, password, email }),
     }).then(this._statusJson);
   };
 
