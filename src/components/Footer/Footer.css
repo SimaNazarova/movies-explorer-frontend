@@ -3,7 +3,7 @@
   background-color: #fafafa;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1170px) {
   .footer {
     padding: 0 30px;
   }
