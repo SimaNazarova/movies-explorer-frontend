@@ -119,7 +119,8 @@ class MainApi {
 }
 
 const api = new MainApi({
-  baseUrl: "https://api.sn.movies-explorer.students.nomoredomains.icu",
+  
+  baseUrl: "http://localhost:3000",
 });
 
 export default api;
